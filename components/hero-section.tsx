@@ -24,15 +24,13 @@ export function HeroSection() {
                 <Star className="h-4 w-4" />
                 Solution RH #1 en Afrique Centrale
               </div>
-              
-              <h1 className="text-4xl lg:text-6xl font-bold text-brand-dark leading-tight">
-                Révolutionnez vos{' '}
-                <span className="text-brand-ebony relative">
-                  processus RH
-                  <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-brand-okoume to-brand-laterite rounded-full"></div>
-                </span>{' '}
-                au Gabon
-              </h1>
+        <h1 className="text-4xl lg:text-6xl font-bold text-brand-dark leading-tight">
+  Révolutionnez vos{' '}
+  <span className="text-brand-ebony">processus RH</span>{' '}
+  au Gabon
+</h1>
+
+
               
               <p className="text-xl text-brand-slate leading-relaxed">
                 Plateforme gabonaise de digitalisation RH. Optimisez la gestion de vos talents 

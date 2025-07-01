@@ -7,13 +7,13 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, Building2, Users, Calendar, Briefcase, GraduationCap, Phone, UserCheck } from 'lucide-react'
 
 const navItems = [
-  { label: 'À propos', href: '#about', icon: Building2 },
-  { label: 'Services', href: '#services', icon: Users },
-  { label: 'Espace Client', href: '#client-space', icon: UserCheck },
-  { label: 'Gestion Congés', href: '#leave-management', icon: Calendar },
-  { label: 'Recrutement', href: '#recruitment', icon: Briefcase },
-  { label: 'Formation', href: '#training', icon: GraduationCap },
-  { label: 'Contact', href: '#contact', icon: Phone },
+  { label: 'À propos', href: '/', icon: Building2 },
+  { label: 'Services', href: '/Services', icon: Users },
+  { label: 'Espace Client', href: '/client-space', icon: UserCheck },
+  { label: 'Gestion Congés', href: '/leave-management', icon: Calendar },
+  { label: 'Recrutement', href: '/recruitment', icon: Briefcase },
+  { label: 'Formation', href: '/training', icon: GraduationCap },
+  { label: 'Contact', href: '/contact', icon: Phone },
 ]
 
 export function Navigation() {
