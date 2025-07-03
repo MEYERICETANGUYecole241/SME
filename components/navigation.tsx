@@ -39,7 +39,7 @@ export function Navigation() {
           <div className="flex flex-1 justify-start">
             <div className="relative">
               <Image
-                src="/logo.jpeg"
+                src="/logo-removebg.png"
                 alt="Logo SME Conseil"
                 width={32}
                 height={32}

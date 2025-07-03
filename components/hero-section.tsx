@@ -26,8 +26,8 @@ export function HeroSection() {
               </div>
         <h1 className="text-4xl lg:text-6xl font-bold text-brand-dark leading-tight">
   Révolutionnez vos{' '}
-  <span className="text-brand-ebony">processus RH</span>{' '}
-  au Gabon
+  <span className="text-brand-ebony">processus RH au Gabon</span>{' '}
+  
 </h1>
 
 
