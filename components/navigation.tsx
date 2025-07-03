@@ -37,7 +37,7 @@ export function Navigation() {
               href="/"
               className="hover:text-brand-ebony transition-colors duration-200 flex items-center"
             >
-              À propos
+              À propos de nous 
             </Link>
           </div>
 
