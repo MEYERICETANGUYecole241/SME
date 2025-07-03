@@ -30,10 +30,6 @@ export function HeroSection() {
                 Former. Structurer.{' '}
                 <span className="text-brand-ebony">Élever les organisations</span>
               </h1>
-
-              <p className="text-xl italic text-brand-ebony leading-relaxed">
-                Cabinet de conseil & organisme de formation stratégique. Optimisez la gestion de vos talents avec des solutions adaptées au contexte africain moderne.
-              </p>
             </div>
 
             {/* Features List */}
@@ -69,11 +65,18 @@ export function HeroSection() {
                 </Button>
               </Link>
 
-              <Link href="https://www.smeconseil.com " target="_blank" rel="noopener noreferrer" passHref>
-                <Button variant="outline" className="px-9 py-6 text-lg border-brand-ebony text-brand-ebony">
-                  Visitez notre site
-                </Button>
-              </Link>
+         <Link
+  href="https://wa.me/241077153846?text=Bonjour%20je%20souhaite%20parler%20à%20un%20expert%20de%20SME%20Conseil%20et%20Développement"
+  target="_blank"
+  rel="noopener noreferrer"
+  passHref
+>
+  <Button variant="outline" className="px-9 py-6 text-lg border-brand-ebony text-brand-ebony">
+    parler à un expert
+  </Button>
+</Link>
+
+
             </div>
           </div>
 

@@ -60,7 +60,7 @@ export default function Footer() {
 
           <div className="border-t border-brand-ebony/50 mt-8 pt-8 text-center">
             <p className="text-gray-300 text-sm">
-              &copy; 2024 SME Conseil & Développement —{' '}
+              &copy; 2025 SME Conseil & Développement —{' '}
               <span className="text-brand-okoume font-semibold">Epiphane Sitou Moukeytou</span>, Fondateur – Consultant stratégique RH. <br />
               <span className="text-brand-copper italic">Solutions RH Made in Africa</span>
             </p>
