@@ -11,7 +11,7 @@ import {
   Calendar,
   Briefcase,
   GraduationCap,
-  Phone,
+  
   UserCheck,
   ChevronDown,
   ChevronUp,
