@@ -3,13 +3,16 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { 
   MapPin, 
   Shield, 
   Globe, 
   Handshake, 
   ArrowRight,
-  CheckCircle 
+  CheckCircle,
+  Mail,
+  Phone
 } from 'lucide-react'
 
 export function GabonAdvantageSection() {
@@ -57,12 +60,10 @@ export function GabonAdvantageSection() {
             Avantage Gabonais
           </Badge>
           <h2 className="text-3xl lg:text-5xl font-bold text-brand-dark mb-6">
-            Pourquoi choisir une solution{' '}
-            <span className="text-brand-ebony">100% gabonaise</span> ?
+            Pourquoi choisir <span className="text-brand-ebony">SME Conseil & Développement</span> ?
           </h2>
-          <p className="text-xl text-brand-slate max-w-3xl mx-auto">
-            Allier l'expertise locale gabonaise aux standards technologiques internationaux 
-            pour une solution RH parfaitement adaptée à votre contexte.
+          <p className="text-xl text-brand-slate max-w-3xl mx-auto italic">
+            Former. Structurer. Élever les organisations — avec une solution pensée localement pour un impact global.
           </p>
         </div>
 
@@ -71,7 +72,7 @@ export function GabonAdvantageSection() {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.pexels.com/photos/37347/office-sitting-room-executive-sitting.jpg?auto=compress&cs=tinysrgb&h=350" 
+                src="/l.jpg" 
                 alt="Bureau moderne à Libreville" 
                 className="w-full h-96 object-cover"
               />
@@ -84,8 +85,8 @@ export function GabonAdvantageSection() {
                     <CheckCircle className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-brand-dark">Made in Gabon</div>
-                    <div className="text-xs text-brand-slate">Innovation locale</div>
+                    <div className="text-sm font-semibold text-brand-dark">SME Conseil</div>
+                    <div className="text-xs text-brand-slate">Expertise locale</div>
                   </div>
                 </div>
               </div>
@@ -129,6 +130,28 @@ export function GabonAdvantageSection() {
           </div>
         </div>
 
+        {/* Section Contact Info */}
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-brand-okoume/20 mb-16 shadow-md">
+          <h3 className="text-xl font-bold text-brand-dark mb-4">À propos de nous</h3>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <div>
+              <p className="font-semibold text-brand-dark">SME Conseil & Développement</p>
+              <p className="text-brand-slate">BP 2218 – Ambowe, Libreville, Gabon</p>
+            </div>
+            <div>
+              <p className="font-semibold text-brand-dark">Contact</p>
+              <div className="flex items-center text-brand-slate mt-1">
+                <Mail className="h-4 w-4 mr-2" />
+                <a href="mailto:contact@smeconseil.com"> sitou.epiphane@gmail.com</a>
+              </div>
+              <div className="flex items-center text-brand-slate mt-1">
+                <Phone className="h-4 w-4 mr-2" />
+                <span>+241077153846</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-brand-ebony/5 rounded-2xl p-8 border border-brand-okoume/20">
@@ -144,9 +167,11 @@ export function GabonAdvantageSection() {
                 Démarrer aujourd'hui
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-brand-okoume text-brand-okoume hover:bg-brand-okoume hover:text-white">
-                Parler à un expert
-              </Button>
+              <Link href="/contact" passHref>
+                <Button asChild size="lg" variant="outline" className="border-2 border-brand-okoume text-brand-okoume hover:bg-brand-okoume hover:text-white">
+                  <a>Parler à un expert</a>
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

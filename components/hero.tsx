@@ -40,7 +40,7 @@ const Hero = () => {
                   {/* Badge slogan */}
                   <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
                     <span className="text-sm font-medium">
-                      Conseil & Développement
+                      Former. Structurer. Élever les organisations.
                     </span>
                   </div>
 
@@ -53,9 +53,9 @@ const Hero = () => {
                       </span>
                     </h2>
 
-                  <p className="text-lg lg:text-xl italic text-white-100">
-                  Plateforme gabonaise de digitalisation RH. Optimisez la gestion de vos talents avec des solutions adaptées au contexte africain moderne.
-                  </p>
+                    <p className="text-lg lg:text-xl italic text-white-100">
+                      Cabinet de conseil & organisme de formation stratégique. Optimisez la gestion de vos talents avec des solutions adaptées au contexte africain moderne.
+                    </p>
 
                   </div>
                 </div>

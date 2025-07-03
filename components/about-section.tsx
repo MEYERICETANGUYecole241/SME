@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Target, Users, Award, Zap } from 'lucide-react'
+import { Target, Users, Award, Zap, Mail, Phone, Globe } from 'lucide-react'
 
 export function AboutSection() {
   console.log("AboutSection component rendered")
@@ -42,10 +42,8 @@ export function AboutSection() {
             <span className="text-brand-ebony">RH digitale</span>{' '}
             au Gabon
           </h2>
-          <p className="text-xl text-brand-slate leading-relaxed">
-            Depuis 8 ans, nous révolutionnons la gestion RH au Gabon et en Afrique Centrale. 
-            Notre expertise alliant tradition gabonaise et innovation technologique transforme 
-            la façon dont les entreprises africaines gèrent leurs ressources humaines.
+          <p className="text-xl text-brand-slate leading-relaxed italic">
+            Former. Structurer. Élever les organisations — notre mission une priorité.
           </p>
         </div>
 
@@ -55,7 +53,7 @@ export function AboutSection() {
             <h3 className="text-2xl font-bold text-brand-dark">Notre Mission Gabonaise</h3>
             <div className="space-y-4 text-brand-slate">
               <p>
-                Chez SME Conseil & Développement Gabon, nous croyons que l'Afrique mérite 
+                Chez <strong>SME Conseil & Développement</strong>, nous croyons que l'Afrique mérite 
                 des solutions RH de classe mondiale, conçues par et pour les Africains.
               </p>
               <p>
@@ -72,7 +70,7 @@ export function AboutSection() {
             {/* Image représentative */}
             <div className="relative rounded-lg overflow-hidden">
               <img 
-                src="https://images.pexels.com/photos/32046848/pexels-photo-32046848.jpeg?auto=compress&cs=tinysrgb&h=350" 
+                src="/v.webp" 
                 alt="Professionnelle gabonaise dans un bureau moderne" 
                 className="w-full h-48 object-cover"
               />
@@ -82,13 +80,14 @@ export function AboutSection() {
 
           {/* Right Column - Stats */}
           <div className="grid grid-cols-2 gap-6">
-            <div className="text-center p-6 bg-brand-sahel rounded-lg border border-brand-okoume/20 hover:shadow-lg transition-all duration-300">
-              <div className="text-3xl font-bold text-brand-ebony mb-2">8+</div>
-              <div className="text-brand-slate">Années au Gabon</div>
-            </div>
+           <div className="text-center p-6 bg-brand-sahel rounded-lg border border-brand-okoume/20 hover:shadow-lg transition-all duration-300">
+  <div className="text-3xl font-bold text-brand-ebony mb-2">150+</div>
+  <div className="text-brand-slate">Entreprises partenaires</div>
+</div>
+
             <div className="text-center p-6 bg-brand-sahel rounded-lg border border-brand-okoume/20 hover:shadow-lg transition-all duration-300">
               <div className="text-3xl font-bold text-brand-okoume mb-2">120+</div>
-              <div className="text-brand-slate">Entreprises gabonaises</div>
+              <div className="text-brand-slate">Clients satisfaits</div>
             </div>
             <div className="text-center p-6 bg-brand-sahel rounded-lg border border-brand-okoume/20 hover:shadow-lg transition-all duration-300">
               <div className="text-3xl font-bold text-brand-laterite mb-2">15K+</div>
@@ -96,7 +95,35 @@ export function AboutSection() {
             </div>
             <div className="text-center p-6 bg-brand-sahel rounded-lg border border-brand-okoume/20 hover:shadow-lg transition-all duration-300">
               <div className="text-3xl font-bold text-brand-copper mb-2">24/7</div>
-              <div className="text-brand-slate">Support Libreville</div>
+              <div className="text-brand-slate">Support technique</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Founder Info Section */}
+        <div className="bg-brand-sahel/10 rounded-2xl p-8 border border-brand-okoume/20 mb-16 shadow-md">
+          <h3 className="text-xl font-bold text-brand-dark mb-4">Rencontrez notre fondateur</h3>
+          <div className="flex flex-col sm:flex-row gap-6">
+            <div className="sm:w-20 sm:h-20 w-16 h-16 bg-brand-ebony rounded-full flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
+              E
+            </div>
+            <div className="flex-1">
+              <p className="font-semibold text-brand-dark">Epiphane Sitou Moukeytou</p>
+              <p className="text-brand-slate">Consultant stratégique RH – Fondateur</p>
+              <p className="text-brand-slate mt-2">
+                Expert en transformation RH avec plus de 15 ans d'expérience dans le conseil et la formation en Afrique centrale.
+              </p>
+            </div>
+            <div className="flex flex-col space-y-2">
+              <a href="mailto:contact@smeconseil.com" className="flex items-center text-brand-slate hover:text-brand-ebony">
+                <Mail className="h-4 w-4 mr-2" /> Email
+              </a>
+              <a href="tel:+241XX-XX-XX-XX" className="flex items-center text-brand-slate hover:text-brand-ebony">
+                <Phone className="h-4 w-4 mr-2" /> Téléphone
+              </a>
+              <a href=" https://www.smeconseil.com " target="_blank" rel="noopener noreferrer" className="flex items-center text-brand-slate hover:text-brand-ebony">
+                <Globe className="h-4 w-4 mr-2" /> Site web
+              </a>
             </div>
           </div>
         </div>
