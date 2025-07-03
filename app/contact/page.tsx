@@ -8,15 +8,17 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { toast } from "sonner"
+import Image from "next/image"
+import Link from "next/link"
 import { 
   Phone, 
   Mail, 
   MapPin, 
   Clock,
   Send,
-  Building2,
   MessageSquare,
-  CheckCircle
+  CheckCircle,
+  ArrowRight
 } from 'lucide-react'
 
 export default function ContactSection() {
@@ -33,19 +35,19 @@ export default function ContactSection() {
     {
       icon: Phone,
       title: "Téléphone",
-      content: "+241 06 50 97 00",
-      subtitle: "Du lundi au vendredi, 9h-18h"
+      content: "+241 077 15 38 46",
+      subtitle: "Du lundi au vendredi, 8h-16h"
     },
     {
       icon: Mail,
       title: "Email",
-      content: "contact@sme-conseil.fr",
+      content: "sitou.epiphane@gmail.com",
       subtitle: "Réponse sous 24h"
     },
     {
       icon: MapPin,
       title: "Adresse",
-      content: "Rond point Awendje",
+      content: "Amboyet, Charbonnage",
       subtitle: "Libreville, Gabon"
     },
     {
@@ -65,7 +67,7 @@ export default function ContactSection() {
     console.log("Form data updated:", { [name]: value })
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
     console.log("Form submission started:", formData)
@@ -77,25 +79,34 @@ export default function ContactSection() {
       return
     }
 
-    // Simulation d'envoi
-    try {
-      await new Promise(resolve => setTimeout(resolve, 2000)) // Simule un délai d'envoi
-      
-      console.log("Form submitted successfully:", formData)
-      toast.success("Votre demande a été envoyée avec succès ! Nous vous contacterons rapidement.")
-      
-      // Reset form
-      setFormData({ phone: '', email: '', comment: '' })
-    } catch (error) {
-      console.error("Form submission error:", error)
-      toast.error("Une erreur est survenue. Veuillez réessayer.")
-    } finally {
-      setIsSubmitting(false)
-    }
+    // Préparation du message pour WhatsApp
+    const whatsappNumber = "+33743376165" // Numéro de téléphone WhatsApp
+    const message = `Nouvelle demande de contact:
+    
+📞 Téléphone: ${formData.phone}
+📧 Email: ${formData.email}
+    
+💬 Message:
+${formData.comment}`
+
+    // Encodage du message pour l'URL
+    const encodedMessage = encodeURIComponent(message)
+    
+    // Création du lien WhatsApp
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`
+    
+    // Ouverture dans un nouvel onglet
+    window.open(whatsappUrl, '_blank')
+    
+    // Reset form
+    setFormData({ phone: '', email: '', comment: '' })
+    setIsSubmitting(false)
+    
+    toast.success("Redirection vers WhatsApp pour envoyer votre message")
   }
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-gray-100">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge className="bg-brand-orange/10 text-brand-orange border-brand-orange/20 mb-4">
@@ -139,7 +150,12 @@ export default function ContactSection() {
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-brand-blue/10 rounded-lg flex items-center justify-center">
-                    <Building2 className="h-6 w-6 text-brand-blue" />
+                    <Image
+                      src="/n.png"  
+                      alt="Logo bâtiment"
+                      width={48}                   
+                      height={48}
+                    />
                   </div>
                   <div>
                     <h4 className="font-semibold text-brand-dark mb-2">SME Conseil & Développement</h4>
@@ -177,7 +193,7 @@ export default function ContactSection() {
                     id="phone"
                     name="phone"
                     type="tel"
-                    placeholder="+241 06 50 97 00"
+                    placeholder="+241 066 50 97 00"
                     value={formData.phone}
                     onChange={handleInputChange}
                     className="border-gray-200 focus:border-brand-blue"
@@ -218,25 +234,26 @@ export default function ContactSection() {
                   />
                 </div>
 
-                {/* Submit Button */}
-                <Button 
-                  type="submit" 
-                  size="lg" 
-                  className="w-full bg-brand-blue hover:bg-brand-blue/90 text-white"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                      Envoi en cours...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="h-5 w-5 mr-2" />
-                      Envoyer ma demande
-                    </>
-                  )}
-                </Button>
+                {/* Bouton de soumission */}
+            <button
+              type="button"
+              onClick={handleSubmit}
+              disabled={isSubmitting}
+              className="w-full py-4 px-6 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-3 relative overflow-hidden group"
+            >
+              {isSubmitting ? (
+                <>
+                  <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                  Envoi en cours...
+                </>
+              ) : (
+                <>
+                  <Send className="w-5 h-5" />
+                  Publier sur WhatsApp
+                </>
+              )}
+              <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+            </button>
 
                 {/* Privacy Notice */}
                 <p className="text-xs text-brand-slate text-center">
@@ -253,13 +270,19 @@ export default function ContactSection() {
         <div className="text-center bg-gradient-to-r from-brand-blue to-brand-orange rounded-2xl p-8 text-white">
           <div className="max-w-2xl mx-auto">
             <CheckCircle className="h-12 w-12 mx-auto mb-4 text-green-300" />
-            <h3 className="text-2xl font-bold mb-2">Prêt à digitiser votre RH ?</h3>
-            <p className="text-blue-100 mb-6">
+            <h3 className="text-2xl font-bold mb-2 text-brand-dark">Prêt à digitiser votre RH ?</h3>
+            <p className="text-green-300 mb-6">
               Rejoignez plus de 200 entreprises qui nous font confiance pour leur transformation RH
             </p>
-            <Button size="lg" variant="secondary" className="bg-white text-brand-blue hover:bg-gray-50">
-              Planifier un rendez-vous
-            </Button>
+             <Link href="/rendez-vous">
+      <Button
+        size="lg"
+        className="bg-brand-ebony hover:bg-brand-ebony/90 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+      >
+        Démarrer aujourd'hui
+        <ArrowRight className="ml-2 h-5 w-5" />
+      </Button>
+    </Link>
           </div>
         </div>
       </div>

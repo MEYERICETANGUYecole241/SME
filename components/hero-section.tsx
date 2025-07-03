@@ -66,7 +66,7 @@ export function HeroSection() {
               </Link>
 
          <Link
-  href="https://wa.me/241077153846?text=Bonjour%20je%20souhaite%20parler%20à%20un%20expert%20de%20SME%20Conseil%20et%20Développement"
+  href="/rendez-vous"
   target="_blank"
   rel="noopener noreferrer"
   passHref

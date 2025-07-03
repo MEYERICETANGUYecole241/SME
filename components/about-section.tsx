@@ -115,13 +115,13 @@ export function AboutSection() {
               </p>
             </div>
             <div className="flex flex-col space-y-2">
-              <a href="mailto:contact@smeconseil.com" className="flex items-center text-brand-slate hover:text-brand-ebony">
+              <a href=" sitou.epiphane@gmail.com" className="flex items-center text-brand-slate hover:text-brand-ebony">
                 <Mail className="h-4 w-4 mr-2" /> Email
               </a>
-              <a href="tel:+241XX-XX-XX-XX" className="flex items-center text-brand-slate hover:text-brand-ebony">
+              <a href="tel:+241077153846" className="flex items-center text-brand-slate hover:text-brand-ebony">
                 <Phone className="h-4 w-4 mr-2" /> Téléphone
               </a>
-              <a href=" https://www.smeconseil.com " target="_blank" rel="noopener noreferrer" className="flex items-center text-brand-slate hover:text-brand-ebony">
+              <a href=" rh2-flax.vercel.app" target="_blank" rel="noopener noreferrer" className="flex items-center text-brand-slate hover:text-brand-ebony">
                 <Globe className="h-4 w-4 mr-2" /> Site web
               </a>
             </div>

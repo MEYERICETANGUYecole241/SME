@@ -163,15 +163,29 @@ export function GabonAdvantageSection() {
               locale pour transformer leur gestion des ressources humaines.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-brand-ebony hover:bg-brand-ebony/90 text-white shadow-lg hover:shadow-xl transition-all duration-300">
-                Démarrer aujourd'hui
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
               <Link href="/contact" passHref>
-                <Button asChild size="lg" variant="outline" className="border-2 border-brand-okoume text-brand-okoume hover:bg-brand-okoume hover:text-white">
-                  <a>Parler à un expert</a>
-                </Button>
-              </Link>
+  <Button
+    size="lg"
+    className="bg-brand-ebony hover:bg-brand-ebony/90 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+    asChild
+  >
+    <a>
+      Démarrer aujourd&apos;hui
+      <ArrowRight className="ml-2 h-5 w-5" />
+    </a>
+  </Button>
+</Link>
+              <Link
+  href="/rendez-vous"
+  target="_blank"
+  rel="noopener noreferrer"
+  passHref
+>
+  <Button variant="outline" className="px-9 py-6 text-lg border-brand-ebony text-brand-ebony">
+    parler à un expert
+  </Button>
+</Link>
+
             </div>
           </div>
         </div>
