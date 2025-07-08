@@ -1,7 +1,13 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Users, TrendingUp, Shield, Star, Mail, Phone } from "lucide-react";
+import {
+  CheckCircle,
+  Users,
+  TrendingUp,
+  Shield,
+  Star,
+} from "lucide-react";
 import Link from "next/link";
 
 export function HeroSection() {
@@ -10,6 +16,17 @@ export function HeroSection() {
   return (
     <section className="relative pt-24 pb-20 bg-gradient-to-br from-brand-sahel via-white to-brand-sahel/50 overflow-hidden">
       {/* Motif géométrique gabonais en arrière-plan */}
+
+     <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center mb-16">
+             
+              <h2 className="text-3xl lg:text-5xl font-bold text-brand-dark mb-6">
+                À propos de SME
+              </h2>
+            
+            </div>
+
+
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-32 h-32 border-2 border-brand-ebony rotate-45"></div>
         <div className="absolute bottom-20 right-20 w-24 h-24 border-2 border-brand-okoume rotate-12"></div>
@@ -27,18 +44,32 @@ export function HeroSection() {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-bold text-brand-dark leading-tight">
-                Former. Structurer.{' '}
-                <span className="text-brand-ebony">Élever les organisations</span>
+                Former. Structurer.{" "}
+                <span className="text-brand-ebony">
+                  Élever les organisations
+                </span>
               </h1>
+            </div>
+
+            {/* Nouveau titre + paragraphe d’intro */}
+            <div className="space-y-2">
+              
+              <p className="text-brand-slate text-base">
+                SME Conseil & Développement accompagne les entreprises,
+                institutions et ONG gabonaises dans la structuration et la
+                digitalisation de leurs processus RH. Notre approche locale,
+                professionnelle et orientée résultats vise à renforcer
+                l’efficacité organisationnelle au Gabon.
+              </p>
             </div>
 
             {/* Features List */}
             <div className="space-y-4">
               {[
-                'Accompagnement personnalisé en gestion RH',
-                'Formation certifiante aux normes internationales',
-                'Digitalisation des processus RH locales',
-                'Support technique et juridique local'
+                "Accompagnement personnalisé en gestion RH",
+                "Formation certifiante aux normes internationales",
+                "Digitalisation des processus RH locales",
+                "Support technique et juridique local",
               ].map((feature, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-brand-laterite flex-shrink-0" />
@@ -50,9 +81,12 @@ export function HeroSection() {
             {/* Founder Info */}
             <div className="mt-6 p-4 bg-white/70 backdrop-blur-sm rounded-lg border border-brand-sahel/30 shadow-sm">
               <p className="text-sm text-brand-dark">
-                <strong>Epiphane Sitou Moukeytou</strong>, Fondateur – Consultant stratégique RH
+                <strong>Epiphane Sitou Moukeytou</strong>, Fondateur – Consultant
+                stratégique RH
               </p>
-              <p className="text-xs text-brand-slate mt-1">BP 2218 – Ambowe, Libreville, Gabon</p>
+              <p className="text-xs text-brand-slate mt-1">
+                BP 2218 – Ambowe, Libreville, Gabon
+              </p>
             </div>
 
             {/* CTA Buttons */}
@@ -65,24 +99,24 @@ export function HeroSection() {
                 </Button>
               </Link>
 
-         <Link
-  href="/rendez-vous"
-  target="_blank"
-  rel="noopener noreferrer"
-  passHref
->
-  <Button variant="outline" className="px-9 py-6 text-lg border-brand-ebony text-brand-ebony">
-    parler à un expert
-  </Button>
-</Link>
-
-
+              <Link
+                href="/rendez-vous"
+                target="_blank"
+                rel="noopener noreferrer"
+                passHref
+              >
+                <Button
+                  variant="outline"
+                  className="px-9 py-6 text-lg border-brand-ebony text-brand-ebony"
+                >
+                  Parler à un expert
+                </Button>
+              </Link>
             </div>
           </div>
 
           {/* Right Column - Hero Image + Stats */}
           <div className="relative">
-            {/* Image principale - Bureau moderne gabonais */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="/o.jpeg"
@@ -91,24 +125,30 @@ export function HeroSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent"></div>
 
-              {/* Badge de confiance sur l'image */}
+              {/* Badge de confiance */}
               <div className="absolute -top-6 -left-10 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-brand-laterite rounded-full flex items-center justify-center">
                     <Shield className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-brand-dark">Gabonais</div>
-                    <div className="text-xs text-brand-slate">Solution locale, impact global</div>
+                    <div className="text-sm font-semibold text-brand-dark">
+                      Gabonais
+                    </div>
+                    <div className="text-xs text-brand-slate">
+                      Solution locale, impact global
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Statistiques flottantes */}
+              {/* Statistiques */}
               <div className="absolute -top-10 -right-10 bg-white rounded-xl shadow-xl p-6 border border-brand-sahel">
                 <div className="flex items-center gap-3 mb-2">
                   <Users className="h-8 w-8 text-brand-ebony" />
-                  <span className="text-brand-laterite text-sm font-medium">↗ +60%</span>
+                  <span className="text-brand-laterite text-sm font-medium">
+                    ↗ +60%
+                  </span>
                 </div>
                 <div className="text-2xl font-bold text-brand-dark">1 500+</div>
                 <div className="text-brand-slate text-sm">Clients satisfaits</div>
@@ -117,7 +157,9 @@ export function HeroSection() {
               <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 border border-brand-sahel">
                 <div className="flex items-center gap-3 mb-2">
                   <TrendingUp className="h-8 w-8 text-brand-okoume" />
-                  <span className="text-brand-laterite text-sm font-medium">↗ +75%</span>
+                  <span className="text-brand-laterite text-sm font-medium">
+                    ↗ +75%
+                  </span>
                 </div>
                 <div className="text-2xl font-bold text-brand-dark">98%</div>
                 <div className="text-brand-slate text-sm">Taux de satisfaction</div>
@@ -126,6 +168,7 @@ export function HeroSection() {
           </div>
         </div>
       </div>
+         </div>
     </section>
   );
 }

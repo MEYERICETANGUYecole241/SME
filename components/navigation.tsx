@@ -7,6 +7,8 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import {
   Menu as MenuIcon,
   Building2,
+  BookOpen,
+  Layers3,
 } from "lucide-react"
 import Image from "next/image"
 
@@ -31,13 +33,25 @@ export function Navigation() {
             </div>
           </div>
 
-          {/* Centre: uniquement "À propos" */}
+          {/* Centre: navigation desktop */}
           <div className="hidden md:flex flex-1 justify-center space-x-12 font-medium text-brand-slate">
             <Link
               href="/"
               className="hover:text-brand-ebony transition-colors duration-200 flex items-center"
             >
-              À propos de nous 
+              À propos de SME
+            </Link>
+            <Link
+              href="/Services"
+              className="hover:text-brand-ebony transition-colors duration-200 flex items-center"
+            >
+              Services
+            </Link>
+            <Link
+              href="/Formations"
+              className="hover:text-brand-ebony transition-colors duration-200 flex items-center"
+            >
+              Formations
             </Link>
           </div>
 
@@ -65,6 +79,22 @@ export function Navigation() {
                   >
                     <Building2 className="h-5 w-5" />
                     <span className="font-medium">À propos</span>
+                  </Link>
+                  <Link
+                    href="/services"
+                    className="flex items-center space-x-3 text-brand-slate hover:text-brand-ebony transition-colors duration-200 p-2 rounded-lg hover:bg-brand-sahel"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <Layers3 className="h-5 w-5" />
+                    <span className="font-medium">Services</span>
+                  </Link>
+                  <Link
+                    href="/formations"
+                    className="flex items-center space-x-3 text-brand-slate hover:text-brand-ebony transition-colors duration-200 p-2 rounded-lg hover:bg-brand-sahel"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <BookOpen className="h-5 w-5" />
+                    <span className="font-medium">Formations</span>
                   </Link>
                   <Link
                     href="/contact"
