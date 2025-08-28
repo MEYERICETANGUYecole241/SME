@@ -19,6 +19,8 @@ export function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-brand-sahel/95 backdrop-blur-sm border-b border-brand-okoume/20 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
+
+
           {/* Logo à gauche */}
           <div className="flex flex-1 justify-start">
             <div className="relative">
@@ -32,6 +34,8 @@ export function Navigation() {
               <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-brand-laterite rounded-full"></div>
             </div>
           </div>
+
+
 
           {/* Centre: navigation desktop */}
           <div className="hidden md:flex flex-1 justify-center space-x-12 font-medium text-brand-slate">
@@ -54,6 +58,7 @@ export function Navigation() {
               Formations
             </Link>
           </div>
+
 
           {/* Contact à droite - desktop */}
           <div className="hidden md:flex flex-1 justify-end">
@@ -80,19 +85,19 @@ export function Navigation() {
                     <Building2 className="h-5 w-5" />
                     <span className="font-medium">À propos</span>
                   </Link>
+                  
                   <Link
-                    href="/services"
-                    className="flex items-center space-x-3 text-brand-slate hover:text-brand-ebony transition-colors duration-200 p-2 rounded-lg hover:bg-brand-sahel"
-                    onClick={() => setIsOpen(false)}
-                  >
+                   href="/Services"
+              className="hover:text-brand-ebony transition-colors duration-200 flex items-center"
+            >
                     <Layers3 className="h-5 w-5" />
                     <span className="font-medium">Services</span>
                   </Link>
+
                   <Link
-                    href="/formations"
-                    className="flex items-center space-x-3 text-brand-slate hover:text-brand-ebony transition-colors duration-200 p-2 rounded-lg hover:bg-brand-sahel"
-                    onClick={() => setIsOpen(false)}
-                  >
+                   href="/Formations"
+              className="hover:text-brand-ebony transition-colors duration-200 flex items-center"
+            >
                     <BookOpen className="h-5 w-5" />
                     <span className="font-medium">Formations</span>
                   </Link>
